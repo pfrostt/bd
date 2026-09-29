@@ -1,20 +1,8 @@
-// GA4 for bd.roamer.se. Its own property on purpose: sharing roamer.se's
-// measurement ID would publicly tie the two sites together.
+// Custom GA4 events for bd.roamer.se. The Google tag itself (G-ZQHLR63QDS, its
+// own property so it doesn't tie this site to roamer.se) sits in each page's
+// <head>, where Tag Assistant and Search Console can detect it.
 (() => {
-  const GA_ID = 'G-ZQHLR63QDS';
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag() { dataLayer.push(arguments); };
-  if (!/^G-[A-Z0-9]{6,}$/.test(GA_ID)) return;
-
-  const s = document.createElement('script');
-  s.async = true;
-  s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  document.head.appendChild(s);
-
-  gtag('js', new Date());
-  gtag('config', GA_ID);
-
+  if (typeof window.gtag !== 'function') return;
   const lang = document.documentElement.lang;
 
   // "Det börjar här" button: someone is interested enough to open the form.
@@ -24,6 +12,8 @@
 
   // SV / EN switch.
   document.querySelectorAll('.lang a:not([aria-current])').forEach((a) =>
-    a.addEventListener('click', () => gtag('event', 'language_switch', { to: a.hreflang }))
+    a.addEventListener('click', () =>
+      gtag('event', 'language_switch', { to: a.hreflang, transport_type: 'beacon' })
+    )
   );
 })();
