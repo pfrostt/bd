@@ -75,6 +75,8 @@
       if (!res.ok || !json.success) throw new Error(json.message || res.status);
       form.reset();
       form.classList.add('is-sent');
+      // GA4's recommended lead event; mark it as a key event in GA to count enquiries.
+      window.gtag?.('event', 'generate_lead', { language: document.documentElement.lang });
       say(COPY.sent, 'ok');
     } catch (err) {
       console.error('Contact form:', err);
