@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bd.roamer.se/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://bd.roamer.se/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bd.roamer.se/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bd.roamer.se/"/>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-04.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bd.roamer.se/en/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://bd.roamer.se/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bd.roamer.se/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bd.roamer.se/"/>
+  </url>
+</urlset>
