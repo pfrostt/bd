@@ -325,12 +325,21 @@ body {
 .contact-form.is-sent .field,
 .contact-form.is-sent .send,
 .contact-form.is-sent .privacy { display: none; }
-.contact-form.is-sent .status {
+/* success: same type pairing as the hero, scaled for the panel */
+.contact-form.is-sent .status { margin-top: 28px; color: var(--bg); }
+.sent-title {
+  display: block;
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--bg);
+  font-weight: 100;
+  font-size: clamp(44px, 4vw, 60px);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+}
+.sent-text {
+  display: block;
+  margin-top: 16px;
+  font: 400 17px/1.4 var(--text);
+  letter-spacing: -0.02em;
 }
 
 .panel-title {

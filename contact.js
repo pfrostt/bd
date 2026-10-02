@@ -8,14 +8,14 @@
     sv: {
       subject: 'Ny förfrågan: boudoirfotografering',
       sending: 'Skickar...',
-      sent: 'Tack. Jag hör av mig inom ett dygn.',
+      sent: ['Tack.', 'Jag hör av mig inom ett dygn.'],
       invalid: 'Fyll i namn, en giltig e-post och några rader.',
       failed: 'Något gick fel. Försök igen om en stund.',
     },
     en: {
       subject: 'New enquiry: boudoir photography (EN)',
       sending: 'Sending...',
-      sent: 'Thank you. I’ll get back to you within a day.',
+      sent: ['Thank you.', 'I’ll get back to you within a day.'],
       invalid: 'Please add your name, a valid email and a few lines.',
       failed: 'Something went wrong. Please try again shortly.',
     },
@@ -88,7 +88,16 @@
       form.classList.add('is-sent');
       // GA4's recommended lead event; mark it as a key event in GA to count enquiries.
       window.gtag?.('event', 'generate_lead', { language: document.documentElement.lang });
-      say(COPY.sent, 'ok');
+      // headline + line, styled like the hero
+      const [title, line] = COPY.sent;
+      const h = document.createElement('span');
+      h.className = 'sent-title';
+      h.textContent = title;
+      const t = document.createElement('span');
+      t.className = 'sent-text';
+      t.textContent = line;
+      status.replaceChildren(h, t);
+      status.dataset.tone = 'ok';
     } catch (err) {
       console.error('Contact form:', err);
       say(COPY.failed, 'error');
