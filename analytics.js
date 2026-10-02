@@ -5,9 +5,14 @@
   if (typeof window.gtag !== 'function') return;
   const lang = document.documentElement.lang;
 
-  // "Det börjar här" button: someone is interested enough to open the form.
+  // "vill du veta mer?" buttons: someone is interested enough to open the form.
   document.querySelectorAll('[data-open-contact]').forEach((b) =>
     b.addEventListener('click', () => gtag('event', 'form_open', { language: lang }))
+  );
+
+  // "så går det till" / "how it works" panel.
+  document.querySelectorAll('[data-open-info]').forEach((b) =>
+    b.addEventListener('click', () => gtag('event', 'info_open', { language: lang }))
   );
 
   // SV / EN switch.

@@ -4,20 +4,30 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bd.roamer.se/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://bd.roamer.se/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bd.roamer.se/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bd.roamer.se/"/>
-    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-01.jpg</image:loc></image:image>
-    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-02.jpg</image:loc></image:image>
-    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-03.jpg</image:loc></image:image>
-    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-04.jpg</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://bd.roamer.se/images/boudoirfotograf-malmo-10.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://bd.roamer.se/en/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://bd.roamer.se/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bd.roamer.se/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bd.roamer.se/"/>
+  </url>
+  <url>
+    <loc>https://bd.roamer.se/morgongava-fotograf-malmo/</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 </urlset>

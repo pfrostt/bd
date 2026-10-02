@@ -8,14 +8,14 @@
     sv: {
       subject: 'Ny förfrågan: boudoirfotografering',
       sending: 'Skickar...',
-      sent: 'Tack. Jag hör av mig inom kort.',
+      sent: 'Tack. Jag hör av mig inom ett dygn.',
       invalid: 'Fyll i namn, en giltig e-post och några rader.',
       failed: 'Något gick fel. Försök igen om en stund.',
     },
     en: {
       subject: 'New enquiry: boudoir photography (EN)',
       sending: 'Sending...',
-      sent: "Thank you. I'll be in touch soon.",
+      sent: 'Thank you. I’ll get back to you within a day.',
       invalid: 'Please add your name, a valid email and a few lines.',
       failed: 'Something went wrong. Please try again shortly.',
     },
@@ -33,8 +33,19 @@
     status.dataset.tone = tone;
   };
 
+  // "How it works" panel: its last button hands over to the form.
+  const info = document.querySelector('.info');
+  if (info) {
+    document.querySelectorAll('[data-open-info]').forEach((b) =>
+      b.addEventListener('click', () => info.showModal())
+    );
+    info.querySelector('[data-close-info]').addEventListener('click', () => info.close());
+    info.addEventListener('click', (e) => { if (e.target === info) info.close(); });
+  }
+
   document.querySelectorAll('[data-open-contact]').forEach((b) =>
     b.addEventListener('click', () => {
+      if (info?.open) info.close();
       dialog.showModal();
       form.querySelector('input[name="name"]').focus();
     })
@@ -64,7 +75,7 @@
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: COPY.subject,
+          subject: form.dataset.subject || COPY.subject,
           from_name: 'bd.roamer.se',
           name,
           email,
